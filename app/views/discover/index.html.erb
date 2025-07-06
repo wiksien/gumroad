@@ -4,12 +4,9 @@
 <% end %>
 <% end %>
 
-<% content_for :content do %>
-  <div>
-    <div class="overflow-hidden">
-      <%= load_pack("discover") %>
-      <%= react_component "Discover", props: @react_discover_props, prerender: true %>
-    </div>
-  </div>
-  <%= render "home/shared/footer" %>
-<% end %>
+<%= load_pack("discover") %>
+<div>
+  <%= react_component "Discover", props: @react_discover_props, prerender: true %>
+</div>
+
+<%= render "home/shared/footer" %>
